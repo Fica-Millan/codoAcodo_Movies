@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+
+
+/*--- H E A D E R   y   F O O T E R ---*/
+
+
+header, footer {
+    height: 70px;
+    background-color: #9f3647;
+    color: white;
+    font-size: 1.1em;
+}
+
+nav, footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 15px;
+    color: white;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px 20px 10px 20px;
+}
+
+.btn-iniciar-sesion,
+.btn-registrate,
+.btn-buscar {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-iniciar-sesion {
+    background-color: black;
+}
+
+.btn-registrate,
+.btn-buscar {
+    background-color: #9f3647;
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+}
+
+.buscar-pelicula{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 500px;
+    height: 25px;
+}
+
+
+/* --- E S T I L O S   G E N E R A L E S ---*/
+
+
+main {
+    background: black;
+}
+
+section {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3{
+    font-size: 2rem;
+    text-shadow: 3px -3px 1px #9f3647;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+
+/*--- I N I C I O ---*/
+
+
+.inicio {
+    background-image: url(./assets/principal.webp);
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+h1,
+.frase-inicio,
+.btn-registrate {
+    text-align: center;
+    z-index: 1;
+    color: white;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.frase-inicio {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+
+
+/*--- B U S C A N D O ---*/
+
+
+.contenedor-buscando {
+    height: 300px;
+    border-bottom: 1px solid #9f3647; 
+    padding: 20px 0; 
+}
+
+
+
+/*--- T E N D E N C I A S  y  A C L A M A D A S ---*/
+
+
+.contenedor-peliculas {
+    display: flex;
+    height: 26rem;
+    gap: 0.5rem;
+}
+
+.contenedor-peliculas h4 {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px; 
+    font-size: 2em;
+}
+
+.contenedor-peliculas > div {
+    flex: 1;
+    border-radius: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+    width: 100%;
+    height: 100%; 
+}
+
+.contenedor-peliculas > div:hover {
+    flex: 15;
+}
+
+.contenedor-peliculas > div:hover h4 {
+    display: block; 
+}
+
+#aclamadas{
+    padding-bottom: 90px;
+}
