@@ -9,14 +9,21 @@
 /*--- H E A D E R   y   F O O T E R ---*/
 
 
-header, footer {
+header,
+footer {
     height: 70px;
     background-color: #9f3647;
     color: white;
     font-size: 1.1em;
 }
 
-nav, footer {
+nav {
+    padding-top: 6.5px;
+    padding-right: 10px;
+}
+
+nav,
+footer {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -28,36 +35,65 @@ nav a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: 15px;
     color: white;
+    transition: color;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav ul {
+    margin-bottom: 0;
 }
 
 nav li {
     display: inline-block;
-    margin: 10px 20px 10px 20px;
+    padding: 10px 20px;
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
-.btn-iniciar-sesion,
-.btn-registrate,
-.btn-buscar {
+nav li:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    padding-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: rotate(5deg);
+}
+
+.btn-negro,
+.boton {
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+}
+
+.btn-negro {
+    background-color: black;
     padding: 10px 20px;
 }
 
-.btn-iniciar-sesion {
-    background-color: black;
-}
-
-.btn-registrate,
-.btn-buscar {
+.boton {
     background-color: #9f3647;
     font-size: 1em;
     font-weight: 700;
     color: white;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.buscar-pelicula{
+.boton:hover{
+    transform: scale(0.95);
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.buscar-pelicula {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -79,11 +115,11 @@ section {
     text-align: center;
 }
 
-h3{
+h3 {
     font-size: 2rem;
     text-shadow: 3px -3px 1px #9f3647;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 
@@ -115,7 +151,7 @@ h3{
 
 h1,
 .frase-inicio,
-.btn-registrate {
+.boton {
     text-align: center;
     z-index: 1;
     color: white;
@@ -128,6 +164,7 @@ h1 {
 .frase-inicio {
     font-size: 2.5rem;
     font-weight: 300;
+    margin-bottom: 50px;
 }
 
 
@@ -137,13 +174,70 @@ h1 {
 
 .contenedor-buscando {
     height: 300px;
-    border-bottom: 1px solid #9f3647; 
-    padding: 20px 0; 
+    border-bottom: 1px solid #9f3647;
+}
+
+.buscar-pelicula {
+    height: 40px;
+    border-radius: 12px;
+}
+
+.btn-buscar {
+    height: 40px;
+    padding: 0 20px
 }
 
 
 
-/*--- T E N D E N C I A S  y  A C L A M A D A S ---*/
+/*--- T E N D E N C I A S ---*/
+
+
+#tendencias{
+    border-bottom: 1px solid #9f3647;
+    padding-bottom: 80px;
+}
+
+.contenedor-card{
+    margin-bottom: 25px;
+}
+
+.pelicula {
+    position: relative;
+    overflow: hidden;
+}
+
+.pelicula img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.pelicula:hover img {
+    transform: scale(1.1);
+}
+
+.titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pelicula:hover .titulo {
+    opacity: 1;
+}
+
+
+
+/*--- A C L A M A D A S ---*/
 
 
 .contenedor-peliculas {
@@ -154,12 +248,12 @@ h1 {
 
 .contenedor-peliculas h4 {
     display: none;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
     font-size: 2em;
 }
 
-.contenedor-peliculas > div {
+.contenedor-peliculas>div {
     flex: 1;
     border-radius: 3px;
     background-position: center;
@@ -167,17 +261,43 @@ h1 {
     background-size: auto 100%;
     transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
-.contenedor-peliculas > div:hover {
+.contenedor-peliculas>div:hover {
     flex: 15;
 }
 
-.contenedor-peliculas > div:hover h4 {
-    display: block; 
+.contenedor-peliculas>div:hover h4 {
+    display: block;
 }
 
-#aclamadas{
+#aclamadas {
     padding-bottom: 90px;
+}
+
+
+
+/*--- D E S I G N ---*/
+
+
+.design{
+    background-color: black;
+    padding-top: 15px;
+}
+.design p{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.design a {
+    color: black;
+  }
+
+.design-logo{
+  max-width: 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 25px;
+  margin-bottom: 10px;
 }
