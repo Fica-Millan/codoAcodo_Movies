@@ -128,7 +128,7 @@ h3 {
 
 
 .inicio {
-    background-image: url(/assets/principal.webp);
+    background-image: url("../assets/principal.webp");
     background-size: cover;
     width: 100%;
     height: 600px;
