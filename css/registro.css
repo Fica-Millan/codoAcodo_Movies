@@ -1,10 +1,8 @@
-/* Estilos para la página de inicio de sesión */
-
+/* Estilos para la página de registro */
 .login {
-    background-image: url("../assets/login.webp");
+    background-image: url("../assets/registro.webp");
     background-size: cover;
     width: 100%;
-    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,60 +20,60 @@
     background-color: rgba(0, 0, 0, 0.45);
 }
 
-.login form{
-    background-color: rgba(0, 0, 0, 0.25);
+.login form {
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    width: 90%;
+    max-width: 400px;
 }
 
 .login h2 {
     text-align: center;
-    z-index: 1;
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
 }
 
-.login form {
-    z-index: 1;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
+.login form input[type="text"],
 .login form input[type="email"],
-.login form input[type="password"] {
+.login form input[type="password"],
+.login form input[type="date"],
+.login form select {
     border: none;
     border-radius: 12px;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 10px 0;
     background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
 }
 
-.forgot-password {
-    display: block;
-    margin-top: 10px;
-    color: white;
-    text-decoration: underline;
-    transition: font-size 0.2s ease;
-    z-index: 1;
-    padding-bottom: 7px;
-    font-size: 1rem;
+.login form input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-.forgot-password:hover{
-    color: white;
+.login form label {
+    margin-bottom: 10px;
 }
 
-/* Estilo para el botón de iniciar sesión */
-.btn-iniciar-sesion {
+.login form .btn-registrarse {
     background-color: #9f3647;
     color: white;
-    padding: 5px 220px;
+    padding: 10px;
     font-size: 1em;
     border: none;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.btn-iniciar-sesion:hover {
+.login form .btn-registrarse:hover {
     transform: scale(0.95);
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
 }
@@ -85,9 +83,7 @@
     color: white;
     font-size: 1rem;
     z-index: 1;
-    margin-top: 30px;
-    padding: 0px 10px;
-    border-radius: 10px;
+    text-align: center;
 }
 
 .register-message a {
