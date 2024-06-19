@@ -101,6 +101,26 @@ nav li:hover {
     height: 25px;
 }
 
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none; 
+    z-index: 1;
+    
+}
+
+#nav-list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #9f3647;
+    z-index: 1000;
+}
+
 
 /* --- E S T I L O S   G E N E R A L E S ---*/
 
@@ -300,4 +320,33 @@ h1 {
   border: 1px solid white;
   width: 25px;
   margin-bottom: 10px;
+}
+
+/* MEDIA QUERY*/
+
+@media (max-width: 850px) {
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        padding-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #9f3647;
+        text-align: right;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 15px 20px;
+        margin-left: auto;
+    }
 }

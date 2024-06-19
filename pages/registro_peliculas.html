@@ -31,7 +31,7 @@
             <ul>
                 <li><a href="../index.html#tendencias">Tendencias</a></li>
                 <li><a href="../index.html#aclamadas">Aclamadas</a></li>
-                <li><a href="../pages/registro.html">Registrarse</a></li>
+                <li><a href="../pages/registro_usuario.html">Registrarse</a></li>
                 <li><a href="../pages/api.html" class="btn-api">Acceso API</a></li>
                 <li class="btn-negro"><a href="../pages/login.html">Iniciar Sesión</a></li>
             </ul>
@@ -40,22 +40,31 @@
 
     <main>
         <section class="login">
-            <form id="registroForm">
-                <h2>Registrarse</h2>
-                <input type="text" id="nombre" placeholder="Nombre" required>
-                <input type="text" id="apellido" placeholder="Apellido" required>
-                <input type="email" id="email" placeholder="Correo electrónico" required>
-                <input type="password" id="password" placeholder="Contraseña" required>
-                <input type="date" id="fechaNacimiento" placeholder="Fecha de nacimiento" required>
-                <select id="pais" required>
-                    <option value="" disabled selected>Selecciona tu país</option>
+            <form class="form-container" action="" method="post">
+                <h1 class="titulo">Registro de Películas</h1><br>
+
+                <input type="text" id="titulo_pelicula" placeholder="Título" required>
+                <input type="text" id="director" placeholder="Director" required>
+
+                <select id="genero" required>
+                    <option value="" disabled selected>Selecciona el género de la película</option>
                 </select>
-                <div>
-                    <input type="checkbox" id="terminos" required>
-                    <label for="terminos">Acepto los <a href="#">términos y condiciones</a></label>
-                </div>
-                <button type="submit" class="btn-registrarse">Registrarse</button>
-                <p class="register-message">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión.</a></p>
+
+                <input type="number" id="ano" placeholder="Año de lanzamiento" required>
+                <input type="number" id="duracion" placeholder="Duración (minutos)" required>
+                <textarea id="sinopsis" placeholder="Sinopsis" required></textarea>
+
+                <select id="pais" required>
+                    <option value="" disabled selected>Selecciona el país de origen</option>
+                </select>
+
+                <input type="text" id="calificacion" placeholder="Calificación" required>
+                <input type="file" id="poster" accept="image/*" required>
+                <input type="url" id="trailer" placeholder="URL del tráiler" required>
+                <textarea id="comentarios" placeholder="Comentarios" required></textarea>
+
+                <button type="submit" class="btn-registrarse">Registrar Película</button>
+
             </form>
         </section>
     </main>
@@ -84,6 +93,7 @@
     </section>
 
     <script src="../scripts/registro.js"></script>
+    <script src="../scripts/registro_peliculas.js"></script>
 
 </body>
 
